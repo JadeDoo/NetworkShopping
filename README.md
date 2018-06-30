@@ -25,12 +25,14 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 ### 引用vant组件库
 
 ` npm install -S vant `
+
 安装babel-plugin-import插件：按需引入组件模块，修改.babelrc文件
+
 ```
 "plugins": [
     "transform-vue-jsx", 
     "transform-runtime",
     ["import",{"libraryName":"vant","style":true}]
   ]
-  
+
 ```
