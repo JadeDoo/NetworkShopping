@@ -36,3 +36,21 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
   ]
 
 ```
+
+### 动态设置html font-size
+
+```
+  var htmlTimer = null; 
+  window.onresize = function(){
+    if ( htmlTimer ){
+      clearTimeout(htmlTimer);
+    }
+    htmlTimer = setTimeout(function(){
+      var htmlWidth = document.documentElement.clientWidth || document.body.clientWidth;
+      var html = document.getElementsByTagName('html')[0];
+      html.style.fontSize = htmlWidth / 20 + 'px';
+    },100)
+  }
+
+  ```
+  
